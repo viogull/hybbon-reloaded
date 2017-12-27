@@ -1,0 +1,68 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'realm-android'
+
+
+
+
+
+apply plugin: 'kotlin-android-extensions'
+
+android {
+    compileSdkVersion 26
+    defaultConfig {
+        applicationId "com.viogull.hybbon"
+        minSdkVersion 24
+        targetSdkVersion 26
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        vectorDrawables.useSupportLibrary = true
+        multiDexEnabled = true
+    }
+    packagingOptions {
+        exclude 'META-INF/INDEX.LIST'
+        exclude 'META-INF/io.netty.versions.properties'
+
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
+    implementation 'com.android.support:appcompat-v7:26.1.0'
+    androidTestImplementation('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+        implementation('net.tomp2p:tomp2p-android:5.0-Beta5') {
+            exclude group: 'org.bitlet'
+        }
+    })
+    implementation 'net.tomp2p:tomp2p-dht:5.0-Beta7'
+    implementation 'com.android.support.constraint:constraint-layout:1.0.2'
+    implementation 'com.infideap.drawerbehavior:drawer-behavior:0.0.2'
+    implementation 'io.realm:android-adapters:2.0.0'
+    implementation 'com.madgag.spongycastle:prov:1.51.0.0'
+    implementation 'com.airbnb.android:lottie:2.0.0'
+    implementation 'com.github.dmytrodanylyk.android-process-button:library:1.0.4'
+    implementation 'com.fujiyuu75:sequent:0.2.1'
+    implementation 'com.muddzdev:styleabletoast:1.0.9'
+    implementation 'com.dmitrymalkovich.android:material-design-dimens:1.4'
+    implementation 'com.afollestad.material-dialogs:core:0.9.4.5'
+    implementation 'com.google.code.gson:gson:2.8.1'
+    implementation 'co.zsmb:materialdrawer-kt:1.2.2'
+    testImplementation 'junit:junit:4.12'
+    implementation files('libs/org.hive2hive.core-1.2.2.jar')
+    implementation files('libs/org.hive2hive.core-1.2.2-javadoc.jar')
+    implementation files('libs/tomp2p-all-5.0-Beta8.jar')
+    implementation files('libs/org.hive2hive.processframework-1.1.jar')
+    implementation files('libs/commons-io-2.6.jar')
+}

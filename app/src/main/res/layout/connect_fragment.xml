@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--suppress ALL -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/connect_frag_rr"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:visibility="visible">
+
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="96dp"
+        android:layout_below="@+id/connectfragment_loader"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="62dp"
+        android:text="HyperIon"
+        android:textColor="@color/DeepBlueMaterial"
+        android:textSize="72sp"
+        android:textStyle="normal" />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/connectfragment_loader"
+        android:layout_width="128dp"
+        android:layout_height="128dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="33dp"
+        android:scaleX="1.5"
+        android:scaleY="1.5" />
+
+
+    <com.dd.processbutton.iml.ActionProcessButton
+        android:id="@+id/connect_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/connect"
+        android:textColor="@android:color/white"
+        android:textSize="16sp"
+
+        custom:pb_colorComplete="@color/green_complete"
+        custom:pb_colorNormal="@color/tealMaterial"
+        custom:pb_colorPressed="@color/blue_pressed"
+        custom:pb_colorProgress="@color/purple_progress"
+        custom:pb_textComplete="Success"
+        custom:pb_textProgress="Bootstraping..."
+        android:layout_below="@+id/text145"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="118dp" />
+
+    <TextView
+        android:id="@+id/text145"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="41dp"
+        android:fontFamily="sans-serif-condensed"
+        android:text="Secure peer-to-peer messaging."
+        android:textColor="@color/material_light_white"
+        android:textSize="18sp"
+        android:typeface="normal"
+        android:layout_below="@+id/textView3"
+        android:layout_centerHorizontal="true" />
+
+
+
+
+</RelativeLayout>
